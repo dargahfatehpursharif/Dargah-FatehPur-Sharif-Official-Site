@@ -190,9 +190,14 @@
     </style>
 </head>
 <body>
-    <!-- Header (Dark Gray Background) -->
-    <header class="header">
-        <div class="bismillah">بسم الله الرحمن الرحيم</div>
+   <!-- Header (Dark Gray Background) -->
+<header class="header">
+    <!-- Bismillah Image -->
+    <div class="bismillah">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bismillah.svg/2560px-Bismillah.svg.png" alt="Bismillah" style="max-height: 80px; margin: 10px auto; display: block;">
+    </div>
+</header>
+
         <h1>Dargah Fateh Pur Sharif</h1>
         <p>Official Site of the Sacred Shrine</p>
     </header>
@@ -219,13 +224,13 @@
             <div class="icon-section">
                 <!-- Pictures Icon -->
                 <div class="icon-card pictures" onclick="showSection('gallery')">
-                    <i class="fas fa-image"></i>
+                    <img src=""https://i.postimg.cc/FRzRJjyM/Hazrat-Syed-Cheezal-Shah-Sufi-AL-Qadri.jpg" alt="Pictures" style="width: 60px; height: 60px; object-fit: cover; border-radius: 10px;">" alt="Pictures Icon" style="width: 50px; height: 50px;">
                     <h3>PICTURES</h3>
                 </div>
                 
                 <!-- Video Icon -->
                 <div class="icon-card videos" onclick="showSection('gallery')">
-                    <i class="fas fa-video"></i>
+                    <i class="<iframe src="https://drive.google.com/file/d/1vZyV30KajKiOB6o5vkFxBk-BaBUgtTjo/preview" "></i>
                     <h3>VIDEO</h3>
                 </div>
                 
@@ -275,7 +280,7 @@
                 <div class="content-item">
                     <i class="fas fa-star"></i>
                     <div>
-                        <h4>317th Urs Mubarak (2025)</h4>
+                        <h4> Urs Mubarak </h4>
                         <p>Join us for the annual celebration of the Urs festival</p>
                     </div>
                 </div>
@@ -321,48 +326,64 @@
                 </div>
             </div>
         </section>
-
         <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <div class="upload-area" onclick="alert('Upload content for Contact section')">
-                <i class="fas fa-address-book"></i>
-                <h3>Upload Contact Information</h3>
-                <p>Click here to add contact details and location information</p>
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="upload-area" onclick="alert('Upload content for Contact section')">
+        <i class="fas fa-address-book"></i>
+        <h3>Upload Contact Information</h3>
+        <p>Click here to add contact details and location information</p>
+    </div>
+    <div class="content-display">
+        <div class="content-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <h4>Location</h4>
+                <p>Dargah Fateh Pur Sharif, Fateh Pur, Pakistan</p>
             </div>
-            <div class="content-display">
-                <div class="content-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Dargah Fateh Pur Sharif, Fateh Pur, Pakistan</p>
-                    </div>
-                </div>
-                <div class="content-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+92 XXX XXXXXXX</p>
-                    </div>
-                </div>
-                <div class="content-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>info@dargahfatehpur.com</p>
-                    </div>
-                </div>
+        </div>
+        <div class="content-item">
+            <i class="fas fa-phone"></i>
+            <div>
+                <h4>Phone</h4>
+                <p>+92 XXX XXXXXXX</p>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="content-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <h4>Email</h4>
+                <p>atifalijiskani49@gmail.com</p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Full Map with Red Pin - No Content Removed -->
+    <div class="map-container" style="margin-top: 20px;">
+        <iframe 
+            src="https://www.google.com/maps?q=28.57109102058869,67.49691910631856&z=15&output=embed"
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+</main>
+
+        
     <!-- Footer (Green Background) -->
     <footer class="footer">
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+           <p>Follow us:</p>
+        <a href="https://facebook.com/BAHRULAMEEQ" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/@Ygcheezalg" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com/its_atif_editz1" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/AtifJiskani1234" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer> 
         </div>
         <p>&copy; 2025 Dargah Fateh Pur Sharif. All Rights Reserved.</p>
     </footer>
