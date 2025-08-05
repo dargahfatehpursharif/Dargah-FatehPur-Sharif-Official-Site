@@ -1,139 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dargah Fateh Pur Sharif - Official Site</title>
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('https://example.com/your-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-    header {
-      background: rgba(51, 51, 51, 0.9);
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      background: rgba(85, 85, 85, 0.9);
-      color: white;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-    section {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 1rem;
-      margin: 1rem;
-      border-radius: 10px;
-    }
-    footer {
-      background: rgba(51, 51, 51, 0.9);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    .social-icons img {
-      width: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
-    }
-    .bismillah {
-      text-align: center;
-      margin: 20px auto;
-    }
-    .bismillah img {
-      width: 250px;
-    }
-    .media-icons {
-      text-align: center;
-      margin: 30px 0 10px;
-      font-size: 32px;
-    }
-    .media-icons a {
-      color: #000;
-      margin: 0 20px;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dargah Fateh Pur Sharif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Header Styles */
+        .header {
+            background-color: #2c3e50; /* Dark gray background */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .bismillah {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f1c40f; /* Yellow color for Bismillah */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        .nav {
+            background-color: #f1c40f; /* Yellow menu bar */
+            padding: 12px;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav a:hover {
+            border-bottom: 2px solid #2c3e50;
+        }
+        
+        /* Main Content */
+        .content {
+            background-color: #ecf0f1; /* Light gray */
+            padding: 40px 20px;
+        }
+        
+        /* Section Styles */
+        .section {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .section h2 {
+            color: #27ae60; /* Green accent */
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 10px;
+        }
+        
+        /* Upload Area */
+        .upload-area {
+            border: 2px dashed #3498db;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .upload-area:hover {
+            background-color: #f8f9fa;
+            border-color: #2980b9;
+        }
+        .upload-area i {
+            font-size: 48px;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        .upload-area h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .upload-area p {
+            color: #7f8c8d;
+        }
+        
+        /* Content Display */
+        .content-display {
+            margin-top: 20px;
+        }
+        .content-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .content-item i {
+            font-size: 24px;
+            color: #27ae60;
+        }
+        .content-item h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .content-item p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        /* Icon Section */
+        .icon-section {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .icon-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .icon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .icon-card i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .pictures i { color: #e74c3c; } /* Red for pictures */
+        .videos i { color: #3498db; } /* Blue for videos */
+        .audio i { color: #f39c12; } /* Orange for audio */
+        .icon-card h3 {
+            font-size: 18px;
+            color: #2c3e50;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #27ae60; /* Green footer */
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .social-icons {
+            margin: 15px 0;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 12px;
+            transition: opacity 0.3s;
+        }
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Dargah Fateh Pur Sharif</h1>
-    <p>Hazrat Syed Rakhyal Shah Sufi Al Qadri & Hazrat Syed Cheezal Shah Sufi Al Qadri</p>
-  </header>
+    <!-- Header (Dark Gray Background) -->
+    <header class="header">
+        <div class="bismillah">بسم الله الرحمن الرحيم</div>
+        <h1>Dargah Fateh Pur Sharif</h1>
+        <p>Official Site of the Sacred Shrine</p>
+    </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Sufi Kalam</a>
-    <a href="#">Gallery</a>
-    <a href="#">Urs & Events</a>
-    <a href="#">News</a>
-    <a href="#">Contact</a>
-  </nav>
+    <!-- Navigation (Yellow Background) -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#" onclick="showSection('home')">HOME</a></li>
+            <li><a href="#" onclick="showSection('about')">ABOUT</a></li>
+            <li><a href="#" onclick="showSection('urs')">URS</a></li>
+            <li><a href="#" onclick="showSection('gallery')">GALLERY</a></li>
+            <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+        </ul>
+    </nav>
 
-  <section>
-    <div class="bismillah">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bismillah.svg/512px-Bismillah.svg.png" alt="Bismillah" />
-    </div>
-    <h2>Welcome to the Official Site of Dargah Fateh Pur Sharif</h2>
-    <p>This website is dedicated to the legacy of Hazrat Syed Rakhyal Shah Sufi Al Qadri and Hazrat Syed Cheezal Shah Sufi Al Qadri. Here you can explore Sufi kalam, Urs events, photos, and more.</p>
-  </section>
+    <!-- Main Content (Light Gray Background) -->
+    <main class="content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <h2>Welcome to Dargah Fateh Pur Sharif</h2>
+            <p>A sacred place of devotion and spiritual enlightenment, dedicated to the blessed saints of Sufism.</p>
+            
+            <!-- Clickable Icons Section -->
+            <div class="icon-section">
+                <!-- Pictures Icon -->
+                <div class="icon-card pictures" onclick="showSection('gallery')">
+                    <i class="fas fa-image"></i>
+                    <h3>PICTURES</h3>
+                </div>
+                
+                <!-- Video Icon -->
+                <div class="icon-card videos" onclick="showSection('gallery')">
+                    <i class="fas fa-video"></i>
+                    <h3>VIDEO</h3>
+                </div>
+                
+                <!-- Audio Icon -->
+                <div class="icon-card audio" onclick="showSection('gallery')">
+                    <i class="fas fa-music"></i>
+                    <h3>AUDIO</h3>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>Follow Us:</p>
-    <div style="text-align: center; font-size: 30px; margin-top: 20px;">
-      <a href="https://facebook.com/BAHRULAMEEQ" target="_blank" style="margin: 0 15px; color: #3b5998;">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://youtube.com/@gcheezalg" target="_blank" style="margin: 0 15px; color: #FF0000;">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://www.instagram.com/its_atif_editz1" target="_blank" style="margin: 0 15px; color: #C13584;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://twitter.com/AtifJiskani1234" target="_blank" style="margin: 0 15px; color: #1DA1F2;">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Dargah Fateh Pur Sharif</h2>
+            <div class="upload-area" onclick="alert('Upload content for About section')">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Upload About Content</h3>
+                <p>Click here to add information about the Dargah</p>
+            </div>
+            <div class="content-display">
+                <div class="content-item">
+                    <i class="fas fa-mosque"></i>
+                    <div>
+                        <h4>History of the Dargah</h4>
+                        <p>Learn about the rich history and significance of this sacred shrine</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h4>The Sufi Saints</h4>
+                        <p>Information about the blessed saints associated with this Dargah</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:atifalijiskani49@gmail.com">atifalijiskani49@gmail.com</a></p>
+        <!-- Urs Section -->
+        <section id="urs" class="section">
+            <h2>Urs Festival</h2>
+            <div class="upload-area" onclick="alert('Upload content for Urs section')">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Upload Urs Content</h3>
+                <p>Click here to add information about the annual Urs festival</p>
+            </div>
+            <div class="content-display">
+                <div class="content-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h4>317th Urs Mubarak (2025)</h4>
+                        <p>Join us for the annual celebration of the Urs festival</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Event Schedule</h4>
+                        <p>Detailed schedule of programs and events during the Urs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <h3>Our Location</h3>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0KDQsNC90YHRgtC40YUg0J3QsNC00LXQuw!5e0!3m2!1sen!2s!4v0000000000000!5m2!1sen!2s" 
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </section>
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="upload-area" onclick="alert('Upload content for Gallery section')">
+                <i class="fas fa-images"></i>
+                <h3>Upload Gallery Content</h3>
+                <p>Click here to add pictures, videos and audio files</p>
+            </div>
+            <div class="content-display">
+                <div class="content-item">
+                    <i class="fas fa-image"></i>
+                    <div>
+                        <h4>Pictures From Urs 2023</h4>
+                        <p>View the collection of memorable moments from last year's Urs</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-video"></i>
+                    <div>
+                        <h4>Video Collection</h4>
+                        <p>Watch recordings of spiritual gatherings and ceremonies</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-music"></i>
+                    <div>
+                        <h4>Audio Kalam</h4>
+                        <p>Listen to soulful Sufi kalams and qawwalis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="media-icons">
-      <a href="#gallery" title="Picture Gallery"><i class="fas fa-image"></i></a>
-      <a href="#audio" title="Audio Kalam"><i class="fas fa-music"></i></a>
-      <a href="#video" title="Video Clips"><i class="fas fa-video"></i></a>
-    </div>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="upload-area" onclick="alert('Upload content for Contact section')">
+                <i class="fas fa-address-book"></i>
+                <h3>Upload Contact Information</h3>
+                <p>Click here to add contact details and location information</p>
+            </div>
+            <div class="content-display">
+                <div class="content-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Dargah Fateh Pur Sharif, Fateh Pur, Pakistan</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+92 XXX XXXXXXX</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@dargahfatehpur.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <p>&copy; 2025 Dargah Fateh Pur Sharif. All rights reserved.</p>
-  </footer>
+    <!-- Footer (Green Background) -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Dargah Fateh Pur Sharif. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show the selected section
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
+    
