@@ -15,13 +15,14 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
         }
-        .bismillah {
-            font-size: 28px;
-            font-weight: bold;
-            color: #f1c40f; /* Yellow color for Bismillah */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            margin-bottom: 15px;
+        .header-text {
+            flex-grow: 1;
         }
         .header h1 {
             font-size: 32px;
@@ -30,6 +31,18 @@
         .header p {
             font-size: 16px;
             opacity: 0.9;
+        }
+        .bismillah-logo {
+            width: 180px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bismillah-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
         
         /* Navigation */
@@ -160,9 +173,9 @@
             font-size: 48px;
             margin-bottom: 15px;
         }
-        .pictures i { color: #e74c3c; } /* Red for pictures */
-        .videos i { color: #3498db; } /* Blue for videos */
-        .audio i { color: #f39c12; } /* Orange for audio */
+        .pictures i { color: #27ae60; } /* Green for pictures */
+        .videos i { color: #27ae60; } /* Green for videos */
+        .audio i { color: #27ae60; } /* Green for audio */
         .icon-card h3 {
             font-size: 18px;
             color: #2c3e50;
@@ -175,31 +188,87 @@
             padding: 25px;
             text-align: center;
         }
+        .social-section {
+            margin: 20px 0;
+        }
+        .follow-us {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
         .social-icons {
-            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
         .social-icons a {
             color: white;
-            font-size: 24px;
-            margin: 0 12px;
-            transition: opacity 0.3s;
+            font-size: 28px;
+            transition: all 0.3s;
         }
         .social-icons a:hover {
+            transform: scale(1.2);
+            opacity: 0.9;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
             opacity: 0.8;
+        }
+        
+        /* Map Styles */
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .map-container:hover .map-overlay {
+            opacity: 1;
+        }
+        .map-overlay-text {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-   <!-- Header (Dark Gray Background) -->
-<header class="header">
-    <!-- Bismillah Image -->
-    <div class="bismillah">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bismillah.svg/2560px-Bismillah.svg.png" alt="Bismillah" style="max-height: 80px; margin: 10px auto; display: block;">
-    </div>
-</header>
-   <h1>Dargah Fateh Pur Sharif</h1>
-   <p>Official Site of the Sacred Shrine</p>
+    <!-- Header (Dark Gray Background) -->
+    <header class="header">
+        <div class="header-text">
+            <h1>Dargah Fateh Pur Sharif</h1>
+            <p>Official Site of the Sacred Shrine</p>
+        </div>
+        <div class="bismillah-logo">
+            <img src="https://i.postimg.cc/abc123/bismillah.png" alt="Bismillah" width="300">
+
+        </div>
     </header>
+
     <!-- Navigation (Yellow Background) -->
     <nav class="nav">
         <ul>
@@ -215,22 +284,20 @@
     <main class="content">
         <!-- Home Section -->
         <section id="home" class="section active">
-                     <h2>Welcome to Dargah Fateh Pur Sharif</h2>
-                     <p>A sacred place of devotion and spiritual enlightenment, dedicated to the blessed saints of Sufism.</p>
+            <h2>Welcome to Dargah Fateh Pur Sharif</h2>
+            <p>A sacred place of devotion and spiritual enlightenment, dedicated to the blessed saints of Sufism.</p>
             
             <!-- Clickable Icons Section -->
             <div class="icon-section">
                 <!-- Pictures Icon -->
                 <div class="icon-card pictures" onclick="showSection('gallery')">
-                   <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBAHRULAMEEQ%2Fposts%2Fpfbid02YK1PUetVFrCKspnN5GqgGsJ3tNJY5k9vEsWpYBFsxWVsspQAhFnPdrbUEmERRFWGl&show_text=true&width=500" width="500" height="609" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                 </section>
-
+                    <i class="fas fa-image"></i>
                     <h3>PICTURES</h3>
                 </div>
                 
                 <!-- Video Icon -->
                 <div class="icon-card videos" onclick="showSection('gallery')">
-                    <i class="<iframe src="https://drive.google.com/file/d/1vZyV30KajKiOB6o5vkFxBk-BaBUgtTjo/preview" "></i>
+                    <i class="fas fa-video"></i>
                     <h3>VIDEO</h3>
                 </div>
                 
@@ -280,7 +347,7 @@
                 <div class="content-item">
                     <i class="fas fa-star"></i>
                     <div>
-                        <h4> Urs Mubarak </h4>
+                        <h4>317th Urs Mubarak (2025)</h4>
                         <p>Join us for the annual celebration of the Urs festival</p>
                     </div>
                 </div>
@@ -326,66 +393,64 @@
                 </div>
             </div>
         </section>
+
         <!-- Contact Section -->
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <div class="upload-area" onclick="alert('Upload content for Contact section')">
-        <i class="fas fa-address-book"></i>
-        <h3>Upload Contact Information</h3>
-        <p>Click here to add contact details and location information</p>
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="upload-area" onclick="alert('Upload content for Contact section')">
+                <i class="fas fa-address-book"></i>
+                <h3>Upload Contact Information</h3>
+                <p>Click here to add contact details and location information</p>
+            </div>
+            <div class="content-display">
+                <div class="content-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Dargah Fateh Pur Sharif, Fateh Pur, Pakistan</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>atifalijiskani49@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+           <!-- Map Container -->
+<div class="map-container" onclick="window.open('https://www.google.com/maps?q=28.57110338738997,67.49693855233289', '_blank')">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6810.000000000001!2d67.49693855233289!3d28.57110338738997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s28.57110338738997%2C67.49693855233289!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div class="map-overlay">
+        <div class="map-overlay-text">Click to open full map</div>
     </div>
-    <div class="content-display">
-        <div class="content-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-                <h4>Location</h4>
-                <p>Dargah Fateh Pur Sharif, Fateh Pur, Pakistan</p>
-            </div>
-        </div>
-        <div class="content-item">
-            <i class="fas fa-phone"></i>
-            <div>
-                <h4>Phone</h4>
-                <p>+92 XXX XXXXXXX</p>
-            </div>
-        </div>
-        <div class="content-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-                <h4>Email</h4>
-                <p>atifalijiskani49@gmail.com</p>
-            </div>
-        </div>
-    </div>
+</div>
 
-    <!-- Full Map with Red Pin - No Content Removed -->
-    <div class="map-container" style="margin-top: 20px;">
-        <iframe 
-            src="https://www.google.com/maps?q=28.57109102058869,67.49691910631856&z=15&output=embed"
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</section>
-</main>
 
-        
     <!-- Footer (Green Background) -->
     <footer class="footer">
-        <div class="social-icons">
-           <p>Follow us:</p>
-        <a href="https://facebook.com/BAHRULAMEEQ" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://youtube.com/@Ygcheezalg" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://instagram.com/its_atif_editz1" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/AtifJiskani1234" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div>
-</footer>
-    </div>
-    <p>&copy; 2025 Dargah Fateh Pur Sharif. All Rights Reserved.</p>
+        <div class="social-section">
+            <div class="follow-us">Follow Us On</div>
+            <div class="social-icons">
+                <a href="https://facebook.com/BAHRULAMEEQ" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@gcheezalg" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/its_atif_editz1" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://Twitter.com/AtifJiskani1234" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 Dargah Fateh Pur Sharif. All Rights Reserved.
+        </div>
     </footer>
 
     <script>
@@ -403,4 +468,3 @@
     </script>
 </body>
 </html>
-    
