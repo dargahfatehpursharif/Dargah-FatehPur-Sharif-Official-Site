@@ -1,125 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dargah Fateh Pur Sharif - Official Site</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #333; color: white; padding: 1rem; text-align: center; }
-    nav { background: #555; color: white; padding: 0.5rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; cursor: pointer; }
-    nav a:hover { text-decoration: underline; }
-
-    section { display: none; padding: 1rem; }
-    section.active { display: block; }
-
-    footer { background: #333; color: white; text-align: center; padding: 1rem; }
-    .social-icons img { width: 30px; margin: 0 10px; vertical-align: middle; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dargah Fatehpur Sharif</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.ibb.co/Tm5H6rp/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2em;
+        }
+        .bismillah {
+            font-size: 24px;
+            font-family: 'Amiri', serif;
+            margin-top: 10px;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .media-icons {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .media-icons img {
+            width: 60px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Dargah Fatehpur Sharif</h1>
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ</div>
+    </header>
 
-  <header>
-    <h1>Dargah Fateh Pur Sharif</h1>
-    <p>Hazrat Syed Rakhyal Shah Sufi Al Qadri & Hazrat Syed Cheezal Shah Sufi Al Qadri</p>
-  </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#dargah">Dargah Fatehpur Sharif</a>
+        <a href="#shahdat">Shahadat</a>
+        <a href="#affiliated">Affiliated</a>
+        <a href="#definition">Definition</a>
+        <a href="#contact">Contact</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
 
-  <nav>
-    <a onclick="showSection('home')">Home</a>
-    <a onclick="showSection('about')">About</a>
-    <a onclick="showSection('sufi')">Sufi Kalam</a>
-    <a onclick="showSection('image')">Image</a>
-    <a onclick="showSection('urs')">Urs & Events</a>
-    <a onclick="showSection('news')">News</a>
-    <a onclick="showSection('contact')">Contact</a>
-  </nav>
+    <section id="home">
+        <h2>Welcome to Dargah Fatehpur Sharif</h2>
+        <p>This is a spiritual place of peace and guidance...</p>
+    </section>
 
-  <section id="home" class="active">
-    <h2>Welcome to the Official Site of Dargah Fateh Pur Sharif</h2>
-    <p>This website is dedicated to the legacy of Hazrat Syed Rakhyal Shah Sufi Al Qadri and Hazrat Syed Cheezal Shah Sufi Al Qadri. Here you can explore Sufi kalam, Urs events, photos, and more.</p>
-  </section>
+    <section id="about">
+        <h2>About</h2>
+        <p>Information about the history and significance of the dargah.</p>
+    </section>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>This section contains information about Hazrat Syed Cheezal Shah Sufi Al Qadri and the history of Dargah Fateh Pur Sharif.</p>
-  </section>
+    <section id="dargah">
+        <h2>Dargah Fatehpur Sharif</h2>
+        <p>Detailed introduction and importance of the shrine.</p>
+    </section>
 
-  <section id="sufi">
-    <h2>Sufi Kalam</h2>
-    <p>Explore the divine poetry and kalams of Sufi saints here.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/CBeyyer9BMA" 
-title="Suhni Surat Jo Kehro Kayan Moon Bayan ,Manro Mast Theyo Husan Disi Heran|Singer Ghulam Haider 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section id="shahdat">
+        <h2>Shahadat</h2>
+        <p>Details about the martyrdom of the saints.</p>
+    </section>
 
-  </section>
+    <section id="affiliated">
+        <h2>Affiliated</h2>
+        <p>List of affiliated khanqahs and personalities.</p>
+    </section>
 
-  <section id="image">
-    <h2>Image</h2>
-    <p>View images from Urs events, gatherings, and the dargah premises.</p>
-    <img src="https://i.postimg.cc/jwVKpnkc/image.jpg" alt="Hazrat Syed Cheezal Shah Sufi AL Qadri" width="400">
-    <figure>
-      <figcaption>Hazrat Syed Cheezal Shah Sufi Al Qadri</figcaption>
-  </figure>
-  </section>
+    <section id="definition">
+        <h2>Definition</h2>
+        <p>Explanation of spiritual and religious terms related to the shrine.</p>
+    </section>
 
-  <section id="urs">
-    <h2>Urs & Events</h2>
-    <p>Upcoming and past Urs Mubarak events and other religious programs.</p>
-  </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>How to reach the shrine or contact the caretakers.</p>
+    </section>
 
-  <section id="news">
-    <h2>News</h2>
-    <p>Latest announcements and updates from the Dargah Fateh Pur Sharif.</p>
-  </section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="media-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Pictures"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Video"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/727/727218.png" alt="Audio"></a>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:atifalijiskani49@gmail.com">atifalijiskani49@gmail.com</a></p>
-
-    <h3>Location Map</h3>
-  <iframe 
-  src="https://www.google.com/maps?q=28.571088665007323,67.4969244707363&hl=es;z=14&output=embed" 
-  width="100%" 
-  height="400" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-    
-</section>
-
-  <footer>
-    <p>Follow Us:</p>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <div style="text-align: center; font-size: 30px; margin-top: 20px;">
-      <a href="https://facebook.com/BAHRULAMEEQ" target="_blank" style="margin: 0 15px; color: #3b5998;">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://youtube.com/@gcheezalg" target="_blank" style="margin: 0 15px; color: #FF0000;">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://www.instagram.com/its_atif_editz1" target="_blank" style="margin: 0 15px; color: #C13584;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://twitter.com/AtifJiskani1234" target="_blank" style="margin: 0 15px; color: #1DA1F2;">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-
-    <p>&copy; 2025 Dargah Fateh Pur Sharif. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('section');
-      sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-
+    <footer>
+        &copy; 2025 Dargah Fatehpur Sharif. All Rights Reserved.
+    </footer>
 </body>
 </html>
+
 
